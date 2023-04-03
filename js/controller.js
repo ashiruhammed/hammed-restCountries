@@ -4,7 +4,7 @@ import { async } from "regenerator-runtime/runtime";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import modeView from "./modeView.js";
-import CountryRenderView from "./countryCardView.js";
+
 import filterView from "./filterView.js";
 import countryCardView from "./countryCardView.js";
 import searchView from "./searchView.js";
@@ -23,7 +23,7 @@ const controlData = async function () {
   try {
     if (window.location.pathname === "/moreIndex.html") return;
     const data = await model.loadData();
-    CountryRenderView.render(model.state.results);
+    countryCardView.render(model.state.results);
   } catch (err) {
     countryCardView._renderError(err);
   }
@@ -50,7 +50,11 @@ const controlClick = function (data) {
 
 const controlClickLoad = async function () {
   try {
-    if (window.location.pathname !== "/moreIndex.html") return;
+    if (
+      window.location.pathname !== "/moreIndex.html" ||
+      window.location.pathname !== "/moreindex"
+    )
+      return;
     await model.getClickedCountry();
     model.state.clickedCountry[0].borders = model.state.clickedborders;
     clickedCountry.render(model.state.clickedCountry[0]);
@@ -70,7 +74,7 @@ const init = function () {
   searchView.addHandlerRender(controlSearch);
   clickedCountry.addHandlerRender(controlClick);
   clickedCountry.addWindowRender(controlClickLoad);
-  CountryRenderView.addHandlerRender();
+  countryCardView.addHandlerRender();
 };
 
 init();
