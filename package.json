@@ -4,7 +4,8 @@
   "description": "",
   "default": "index.js",
   "scripts": {
-    "start": "parcel index.html moreIndex.html --dist-dir ./dist"
+    "start": "parcel index.html moreIndex.html",
+    "build": "parcel index.html moreIndex.html --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
