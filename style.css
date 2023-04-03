@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  /* overflow: hidden; */
+  color: hsl(200, 15%, 8%);
+  background: hsl(0, 0%, 98%);
+}
+
+.section {
+  padding: 1vh 4vw;
+}
+
+.nav,
+.mode,
+.searchCont,
+.country_det,
+.country_detCont,
+.details,
+.border div,
+.border {
+  display: flex;
+}
+
+.border div {
+  column-gap: 1.5rem;
+}
+
+.border {
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.border p {
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.shadow {
+  box-shadow: 0 1px 4px 0px hsl(207deg 6.86% 72.1%);
+}
+
+.nightMode-shadow {
+  box-shadow: 0 1px 4px 0px hsl(200, 15%, 8%);
+}
+
+.nav {
+  justify-content: space-between;
+}
+
+.mode img {
+  width: min-content;
+}
+.mode {
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.searchCont {
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 20px;
+  /* justify-content: space-between; */
+}
+
+.country__card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+select {
+  cursor: pointer;
+}
+
+.country__opt {
+  width: min-content;
+  font-weight: bold;
+
+  height: max-content;
+}
+
+input,
+.country__opt {
+  padding: 1.3rem 1.5rem;
+  outline: 0;
+  border-radius: 5px;
+}
+
+option {
+  font-weight: bold;
+}
+
+.countryCont {
+  display: flex;
+  padding: 2rem 10%;
+  /* display: none; */
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.country__card > div {
+  padding: 1rem 1.5rem 4rem;
+}
+
+.lightMode-color {
+  color: hsl(0, 0%, 100%);
+}
+
+.nightMode-color {
+  color: hsl(207, 26%, 17%);
+}
+
+.country__card {
+  border-radius: 5px;
+  border: none;
+}
+.country__card img {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 100%;
+
+  object-fit: cover;
+  min-height: 18.5vh;
+  max-height: 18.5vh;
+}
+
+h3,
+p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+input,
+select {
+  border: 1px solid hsl(0, 0%, 100%);
+}
+h1 {
+  margin: 1.5rem 0;
+}
+.country_det {
+  margin-top: 1.2rem;
+  column-gap: 1rem;
+}
+.hide {
+  display: none;
+}
+
+.nightMode {
+  background: hsl(200, 15%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+.country_moreDet {
+  padding: 3rem 2rem;
+  margin-bottom: 1rem;
+  margin-top: 75px;
+  /* display: none; */
+  /* transform: translateY(10vh); */
+}
+.country_detCont,
+.country_moreDet .details {
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.country_moreDet img {
+  width: 100%;
+}
+.country_detCont .details {
+  line-height: 2rem;
+}
+a {
+  text-decoration: none;
+}
+
+.lightMode {
+  color: white;
+}
+button {
+  background: white;
+  border: 0;
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.moreDetails {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .searchCont {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .country_detCont_par {
+    flex-grow: 0.5;
+  }
+  .country_detCont {
+    row-gap: 4rem;
+  }
+
+  .countryCont {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    row-gap: 5rem;
+
+    margin-top: 20px;
+  }
+
+  input {
+    width: 40%;
+  }
+
+  .section,
+  .countryCont {
+    padding: 1vh 4vw;
+  }
+  .country_moreDet {
+    margin: 1vh 4vw;
+  }
+  .error {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+  }
+
+  .error p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .moreDetails {
+    display: flex;
+    /* column-gap: 5%; */
+    justify-content: space-between;
+  }
+
+  .country_moreDet img {
+    max-width: 40%;
+    object-fit: cover;
+    min-height: 40%;
+    max-height: 40%;
+  }
+
+  .country_moreDet .details {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .border {
+    flex-direction: row;
+    align-items: center;
+  }
+  .country__card {
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+    max-width: 20vw;
+  }
+}
