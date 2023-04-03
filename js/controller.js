@@ -50,13 +50,10 @@ const controlClick = function (data) {
 
 const controlClickLoad = async function () {
   try {
-    if (
-      window.location.pathname !== "/moreIndex.html" ||
-      window.location.pathname !== "/moreindex"
-    )
-      return;
+    if (!window.location.pathname.includes("/more")) return;
     await model.getClickedCountry();
     model.state.clickedCountry[0].borders = model.state.clickedborders;
+
     clickedCountry.render(model.state.clickedCountry[0]);
     console.log(model);
   } catch (err) {
