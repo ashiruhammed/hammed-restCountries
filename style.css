@@ -164,7 +164,7 @@ h1 {
 .country_moreDet {
   padding: 3rem 2rem;
   margin-bottom: 1rem;
-  margin-top: 75px;
+  margin-top: 2vh;
   /* display: none; */
   /* transform: translateY(10vh); */
 }
@@ -191,6 +191,7 @@ button {
   background: white;
   border: 0;
   padding: 1rem 2.5rem;
+  margin-bottom: 1.5vh;
   border-radius: 2px;
   cursor: pointer;
 }
