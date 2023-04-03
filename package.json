@@ -2,9 +2,9 @@
   "name": "rest-countries-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "default": "index.js",
   "scripts": {
-    "start": "parcel index.html moreIndex.html"
+    "start": "parcel index.html moreIndex.html --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
