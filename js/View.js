@@ -14,7 +14,7 @@ export class View {
     <div class="error">
         <p>
         ${data}.
-        <a class="error_link lightMode" href="">Please try again later</a>
+        <a class="error_link" href="">Please try again later</a>
         </p>
         </div>
   `;

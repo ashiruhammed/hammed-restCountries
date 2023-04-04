@@ -132,8 +132,8 @@ option {
   width: 100%;
 
   object-fit: cover;
-  min-height: 18.5vh;
-  max-height: 18.5vh;
+  min-height: 19vh;
+  max-height: 19vh;
 }
 
 h3,
@@ -184,9 +184,6 @@ button a {
   text-decoration: none;
 }
 
-.lightMode {
-  color: white;
-}
 button {
   background: white;
   border: 0;
