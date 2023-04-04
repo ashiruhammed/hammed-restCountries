@@ -130,10 +130,9 @@ option {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   width: 100%;
-
   object-fit: cover;
-  min-height: 23vh;
-  max-height: 23vh;
+  min-height: 22.8vh;
+  max-height: 22.8vh;
 }
 
 h3,
